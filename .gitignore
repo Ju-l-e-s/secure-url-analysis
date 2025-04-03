@@ -1,0 +1,58 @@
+# Python
+__pycache__/
+.Python
+env/
+
+# Environments
+.env
+.venv
+venv/
+ENV/
+env/
+
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+.project
+.pydevproject
+.settings/
+
+# Docker
+.dockerignore
+.docker/
+
+# Logs and databases
+*.log
+*.sqlite
+*.sqlite3
+*.db
+
+# Analysis reports and artifacts
+reports/
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+
+# Temporary files
+tmp/
+temp/
+.cache/
+
+# Tool specific
+.coverage
+htmlcov/
+.tox/
+.pytest_cache/

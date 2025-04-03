@@ -1,0 +1,20 @@
+# Core dependencies
+selenium==4.15.2
+mitmproxy==11.0.2
+tldextract==5.1.1
+
+# Utilities
+requests==2.31.0
+beautifulsoup4==4.12.2
+cryptography==42.0.5
+pillow==10.2.0
+
+# For HTML/XML parsing
+lxml==4.9.3
+
+# For handling JSON
+jsonschema==4.20.0
+
+# Testing
+pytest==7.4.3
+pytest-cov==4.1.0
