@@ -1,9 +1,6 @@
 import tldextract
 from selenium.webdriver.common.by import By
 
-# Configure tldextract to use a writable directory or disable caching
-tldextract_cache_dir = '/home/sandboxuser/tmp/tldextract_cache'
-
 
 class DomAnalyzer:
     """
@@ -25,7 +22,6 @@ class DomAnalyzer:
         self.results = []
 
         # Extract base domain for comparisons
-        # Use cache_dir=tldextract_cache_dir to avoid permission errors
         original_domain_info = tldextract.extract(original_url)
         self.original_base_domain = f"{original_domain_info.domain}.{original_domain_info.suffix}"
 
@@ -117,7 +113,6 @@ class DomAnalyzer:
                         iframe.get_attribute("hidden") is not None
                 )
 
-                # Use cache_dir=tldextract_cache_dir to avoid permission errors
                 iframe_domain_info = tldextract.extract(iframe_src)
                 iframe_base_domain = f"{iframe_domain_info.domain}.{iframe_domain_info.suffix}"
 
@@ -159,7 +154,6 @@ class DomAnalyzer:
                     action = form.get_attribute("action") or ""
 
                     if action.startswith("http"):
-                        # Use cache_dir=tldextract_cache_dir to avoid permission errors
                         form_domain_info = tldextract.extract(action)
                         form_base_domain = f"{form_domain_info.domain}.{form_domain_info.suffix}"
 
@@ -232,7 +226,6 @@ class DomAnalyzer:
                 if not script_src:
                     continue
 
-                # Use cache_dir=tldextract_cache_dir to avoid permission errors
                 script_domain_info = tldextract.extract(script_src)
                 script_base_domain = f"{script_domain_info.domain}.{script_domain_info.suffix}"
 
